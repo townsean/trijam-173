@@ -1,13 +1,15 @@
 # trijam-173
 Source code for Ashley's Trijam #173 entry. The theme is "You are the monster."
 
-[Trijam](https://itch.io/jam/trijam-173) is a weekly game jam where the goal is to create a game in under 3 hours of development time.
+[Trijam](https://itch.io/jam/trijam-173) is a weekly game jam where the goal is to create a game in under 3 hours of development time. Monster Mimic was completed in about 8 hours of active development time.
 
 ## Synopsis
 
 Monster Mimic is a speed and memory game. Players assume the role of a monster with the ability to mimic the appearance of monsters they encounter. 
 
 The objective of the game is to accurately match the appearance of another monster within the finite amount of time.
+
+![Wrong Step, You Fall Gameplay](assets/monster-mimic.gif)
 
 ## Built With
 
