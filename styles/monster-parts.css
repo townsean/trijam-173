@@ -1,0 +1,12 @@
+#mimic-monster {
+    display: flex;
+    flex-direction: column;
+    height: 45vmin;
+    width: 40vmin;
+    border-radius: 35px 35px 0 0;
+    flex: 1;
+}
+
+.skin {
+    background-color: var(--primary);
+}
