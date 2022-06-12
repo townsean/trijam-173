@@ -24,6 +24,7 @@ header {
     color: white;
     box-shadow: 5px 0 10px black;
     margin-bottom: 25px;
+    padding: 20px;
 }
 
 header a {
@@ -41,27 +42,28 @@ main {
 
 footer {
     text-align: center;
+    padding: 10px;
 }
 
 footer a {
     color: var(--primary);
 }
 
-header,
-footer {
-    padding: 20px;
-}
-
 a {
     text-decoration: none;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Luckiest Guy', sans-serif;
     color: var(--primary);
     font-size: 4rem;
     text-shadow: 2px 2px var(--secondary), 
                  4px 4px var(--purple);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: .5rem 1rem;
 }
 
 p {
@@ -104,5 +106,5 @@ p {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
