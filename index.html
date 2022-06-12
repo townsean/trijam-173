@@ -17,7 +17,7 @@
         </header>
         <main>
             <!-- Start Scene -->
-            <section id="start-scene" class="scene">
+            <section id="start-scene" class="scene hidden">
                 <h1>Monster Mimic</h1>
                 <p>
                     You are a monster with the power of mimicking the appearance of others!
@@ -27,25 +27,42 @@
                 <button id="start-button" class="game-state-button">Start Game</button>
             </section>
             <!-- Game Scene -->
-            <section id="game-scene" class="scene hidden">
-                <section id="monster-to-copy"></section>
-                <section id="options" class="hidden"></section>
-                <section id="mimic-monster" class="skin">
-                    <!-- Eyebrows -->
-                    <section class="eyebrows">
-                        <div id="left-eyebrow"></div>
-                        <div id="right-eyebrow"></div>
+            <section id="game-scene" class="scene ">
+                <div>
+                    <section id="monster-to-copy">
+                        <!-- Eyebrows -->
+                        <section class="eyebrows">
+                            <div id="copy-left-eyebrow" class="eyebrow-a"></div>
+                            <div id="copy-right-eyebrow" class="eyebrow-a"></div>
+                        </section>
+                        <!-- Eyes -->
+                        <section class="eyes">
+                            <div id="copy-left-eye" class="eye-d"></div>
+                            <div id="copy-right-eye" class="eye-d"></div>
+                        </section>
+                        <!-- Nose -->
+                        <section id="copy-nose" class="nose-c"></section>
+                        <!-- Mouth -->
+                        <section id="copy-mouth" class="mouth-b"></section>
                     </section>
-                    <!-- Eyes -->
-                    <section class="eyes">
-                        <div id="left-eye"></div>
-                        <div id="right-eye"></div>
+                    <section id="options" class="hidden"></section>
+                    <section id="mimic-monster" class="skin">
+                        <!-- Eyebrows -->
+                        <section class="eyebrows">
+                            <div id="left-eyebrow" class="basic-eyebrows"></div>
+                            <div id="right-eyebrow" class="basic-eyebrows"></div>
+                        </section>
+                        <!-- Eyes -->
+                        <section class="eyes">
+                            <div id="left-eye" class="basic-eyes"></div>
+                            <div id="right-eye" class="basic-eyes"></div>
+                        </section>
+                        <!-- Nose -->
+                        <section id="nose" class="basic-nose"></section>
+                        <!-- Mouth -->
+                        <section id="mouth" class="basic-mouth"></section>
                     </section>
-                    <!-- Nose -->
-                    <section id="nose"></section>
-                    <!-- Mouth -->
-                    <section id="mouth"></section>
-                </section>
+                </div>
             </section>
             <!-- End Scene -->
             <section id="end-scene" class="scene hidden"></section>
@@ -53,6 +70,6 @@
         <footer>
             <a href="https://twitter.com/thecodingcouple">A game by Ashley | @thecodingcouple</a>
         </footer>
-        <script src="scripts/main.js"></script>
+        <script type="module" src="scripts/main.js"></script>
     </body>
 </html>

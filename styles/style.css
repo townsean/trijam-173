@@ -36,6 +36,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 footer {
@@ -64,7 +65,7 @@ h1 {
 }
 
 p {
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .hidden {
@@ -92,4 +93,16 @@ p {
 
 .scene {
     text-align: center;
+}
+
+#game-scene {
+    height: 100%;
+}
+
+#game-scene > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
 }

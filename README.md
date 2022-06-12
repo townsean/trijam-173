@@ -22,6 +22,10 @@ The objective of the game is to accurately match the appearance of another monst
 
 ## Useful Resources
 
+* [Draw a semi cirle with CSS](https://stackoverflow.com/questions/22415651/half-circle-with-css-border-outline-only)
+* [Import Assertions](https://v8.dev/features/import-assertions)
+
+
 ## Ideas for future improvements
 
 ???

@@ -1,0 +1,26 @@
+{
+    "eyes": [
+        "eye-a",
+        "eye-b",
+        "eye-c",
+        "eye-d"
+    ],
+    "noses": [
+        "nose-a", 
+        "nose-b", 
+        "nose-c", 
+        "nose-d", 
+        "nose-e"
+    ],
+    "mouth": [
+        "mouth-a",
+        "mouth-b",
+        "mouth-c",
+        "mouth-d"
+    ],
+    "eyebrows": [
+        "eyebrow-a", 
+        "eyebrow-b", 
+        "eyebrow-c"
+    ]
+}

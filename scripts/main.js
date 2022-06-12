@@ -1,3 +1,7 @@
+import options from './options.json' assert { type: "json" };
+
+console.log(options);
+
 /**
  * Main function
  */
