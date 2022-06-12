@@ -29,56 +29,59 @@
             <!-- Game Scene -->
             <section id="game-scene" class="scene hidden">
                 <div>
-                    <div id="copy-monster-container">
-                        <section id="monster-to-copy">
+                    <h2>Mimic the monster within <span id="countdown">10</span> <span>seconds</span>!</h2>
+                    <section>
+                        <div id="copy-monster-container">
+                            <section id="monster-to-copy">
+                                <!-- Eyebrows -->
+                                <section class="eyebrows">
+                                    <div id="copy-left-eyebrow" class="eyebrow-a"></div>
+                                    <div id="copy-right-eyebrow" class="eyebrow-a"></div>
+                                </section>
+                                <!-- Eyes -->
+                                <section class="eyes">
+                                    <div id="copy-left-eye" class="eye-d"></div>
+                                    <div id="copy-right-eye" class="eye-d"></div>
+                                </section>
+                                <!-- Nose -->
+                                <section id="copy-nose" class="nose-c"></section>
+                                <!-- Mouth -->
+                                <section id="copy-mouth" class="mouth-b"></section>
+                            </section>
+                        </div>
+                        <section id="options" class="hidden">
+                            <h3>Eyebrows</h3>
+                            <section id="eyebrow-options" class="options-section"></section>
+                            <h3>Eyes</h3>
+                            <section id="eye-options" class="options-section"></section>
+                            <h3>Nose</h3>
+                            <section id="nose-options" class="options-section"></section>
+                            <h3>Mouth</h3>
+                            <section id="mouth-options" class="options-section"></section>
+                        </section>
+                        <section id="mimic-monster" class="skin">
                             <!-- Eyebrows -->
                             <section class="eyebrows">
-                                <div id="copy-left-eyebrow" class="eyebrow-a"></div>
-                                <div id="copy-right-eyebrow" class="eyebrow-a"></div>
+                                <div id="left-eyebrow" class="basic-eyebrows"></div>
+                                <div id="right-eyebrow" class="basic-eyebrows"></div>
                             </section>
                             <!-- Eyes -->
                             <section class="eyes">
-                                <div id="copy-left-eye" class="eye-d"></div>
-                                <div id="copy-right-eye" class="eye-d"></div>
+                                <div id="left-eye" class="basic-eyes"></div>
+                                <div id="right-eye" class="basic-eyes"></div>
                             </section>
                             <!-- Nose -->
-                            <section id="copy-nose" class="nose-c"></section>
+                            <section id="nose" class="basic-nose"></section>
                             <!-- Mouth -->
-                            <section id="copy-mouth" class="mouth-b"></section>
+                            <section id="mouth" class="basic-mouth"></section>
                         </section>
-                    </div>
-                    <section id="options" class="hidden">
-                        <h2>Mimic the monster within <span id="countdown">10</span> <span>seconds</span>!</h2>
-                        <h3>Eyebrows</h3>
-                        <section id="eyebrow-options" class="options-section"></section>
-                        <h3>Eyes</h3>
-                        <section id="eye-options" class="options-section"></section>
-                        <h3>Nose</h3>
-                        <section id="nose-options" class="options-section"></section>
-                        <h3>Mouth</h3>
-                        <section id="mouth-options" class="options-section"></section>
-                    </section>
-                    <section id="mimic-monster" class="skin">
-                        <!-- Eyebrows -->
-                        <section class="eyebrows">
-                            <div id="left-eyebrow" class="basic-eyebrows"></div>
-                            <div id="right-eyebrow" class="basic-eyebrows"></div>
-                        </section>
-                        <!-- Eyes -->
-                        <section class="eyes">
-                            <div id="left-eye" class="basic-eyes"></div>
-                            <div id="right-eye" class="basic-eyes"></div>
-                        </section>
-                        <!-- Nose -->
-                        <section id="nose" class="basic-nose"></section>
-                        <!-- Mouth -->
-                        <section id="mouth" class="basic-mouth"></section>
                     </section>
                 </div>
             </section>
             <!-- End Scene -->
             <section id="end-scene" class="scene hidden">
-                <h1>Game Over</h1>
+                <h1>Try Again?</h1>
+                <section id="compare-section"></section>
                 <button id="restart-button" class="game-state-button">Restart Game</button>
             </section>
         </main>

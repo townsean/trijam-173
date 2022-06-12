@@ -77,6 +77,14 @@ function endGame() {
 
     const countdownSpan = document.getElementById('countdown');
     countdownSpan.innerText = 10;
+
+    const compareSection = document.getElementById('compare-section');
+    compareSection.innerHTML = '';
+
+    const copyMonster = document.getElementById('monster-to-copy');
+    const mimicMonster = document.getElementById('mimic-monster');
+
+    compareSection.append(document.importNode(copyMonster, true), document.importNode(mimicMonster, true));
 }
 
 /**
@@ -119,7 +127,74 @@ function getOptionElement(optionClassName) {
 
     optionContainer.appendChild(option);
 
+    optionContainer.addEventListener("mouseup", (event) => {
+        let className = event.target.className;
+        if(className == 'option') {
+            className = event.target.firstChild.className;
+        }
+        
+        let partName = className.split('-');
+        switch(partName[0]) {
+            case "eyebrow":
+                updateEyebrows(className);
+                break;
+            case "eye":
+                updateEyes(className);
+                break;
+            case "nose":
+                updateNose(className);
+                break;
+            case "mouth":
+                updateMouth(className);
+                break;
+            default:
+                break;
+        }
+    });
+
     return optionContainer;
+}
+
+/**
+ * 
+ * @param {*} className 
+ */
+function updateEyebrows(className) {
+    const leftEyebrow = document.getElementById('left-eyebrow');
+    const rightEyebrow = document.getElementById('right-eyebrow');
+
+    leftEyebrow.className = className;
+    rightEyebrow.className = className;
+}
+
+/**
+ * 
+ * @param {*} className 
+ */
+ function updateEyes(className) {
+    const leftEye = document.getElementById('left-eye');
+    const rightEye = document.getElementById('right-eye');
+
+    leftEye.className = className;
+    rightEye.className = className;
+}
+
+/**
+ * 
+ * @param {*} className 
+ */
+ function updateNose(className) {
+    const nose = document.getElementById('nose');
+    nose.className = className;
+}
+
+/**
+ * 
+ * @param {*} className 
+ */
+ function updateMouth(className) {
+    const mouth = document.getElementById('mouth');
+    mouth.className = className;
 }
 
 /**

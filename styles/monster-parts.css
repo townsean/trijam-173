@@ -4,7 +4,7 @@
 
 #mimic-monster {
     height: 40vmin;
-    max-height: 40vh;
+    min-height: 30vh;
     width: 50vmin;
     max-width: 60vw;
     border-radius: 45px 45px 0 0;
@@ -228,7 +228,7 @@
     border-radius: 50%;
     width: 1vmin;
     height: 1vmin;
-    margin-right: 2vmin;
+    margin-right: 2vmin !important;
     background-color: white;
     box-shadow: 2vmin 0 white;
 }
@@ -280,4 +280,21 @@
     width: 4vmin;
     height: 4vmin;
     margin-top: 2vmin;
+}
+
+
+@media (max-width: 1000px) {
+    #mimic-monster {
+    }
+
+    #monster-to-copy {
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 800px) {
+    #mimic-monster {
+        max-width: 30vw;
+        margin-left: 35px;
+    }
 }
