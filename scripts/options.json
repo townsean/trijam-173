@@ -22,5 +22,9 @@
         "eyebrow-a", 
         "eyebrow-b", 
         "eyebrow-c"
+    ],
+    "colors": [
+        "#51557E",
+        "816797"
     ]
 }
