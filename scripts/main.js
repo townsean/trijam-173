@@ -4,6 +4,8 @@ import options from './options.json' assert { type: "json" };
  * Main function
  */
 function main() {
+    generateOptions();
+
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', () => {
         const backgroundAudio = getAudio('assets/soundtrack.wav', 0.25, true);
@@ -75,6 +77,49 @@ function endGame() {
 
     const countdownSpan = document.getElementById('countdown');
     countdownSpan.innerText = 10;
+}
+
+/**
+ * Generate option selections
+ */
+function generateOptions() {
+    const eyebrowOptions = document.getElementById('eyebrow-options');
+    const eyeOptions = document.getElementById('eye-options');
+    const noseOptions = document.getElementById('nose-options');
+    const mouthOptions = document.getElementById('mouth-options');
+
+    addOptionsToSection(eyebrowOptions, options.eyebrows);
+    addOptionsToSection(eyeOptions, options.eyes);
+    addOptionsToSection(noseOptions, options.noses);
+    addOptionsToSection(mouthOptions, options.mouth);
+}
+
+/**
+ * 
+ * @param {*} element 
+ */
+function addOptionsToSection(element, options) {
+    for(let option of options) {
+        const optionElement = getOptionElement(option);
+        element.appendChild(optionElement);
+    }
+}
+
+/**
+ * 
+ * @param {*} optionClassName 
+ * @returns 
+ */
+function getOptionElement(optionClassName) {
+    const optionContainer = document.createElement('div');
+    const option = document.createElement('div');
+
+    optionContainer.classList.add('option');
+    option.classList.add(optionClassName);
+
+    optionContainer.appendChild(option);
+
+    return optionContainer;
 }
 
 /**

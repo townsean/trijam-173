@@ -53,6 +53,10 @@ a {
     text-decoration: none;
 }
 
+span {
+    color: darkred;
+}
+
 h1, h2 {
     font-family: 'Luckiest Guy', sans-serif;
     color: var(--primary);
@@ -62,8 +66,12 @@ h1, h2 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: .5rem 1rem;
+}
+
+h3 {
+    margin: .25rem;
 }
 
 p {
@@ -95,6 +103,26 @@ p {
 
 .scene {
     text-align: center;
+}
+
+.option {
+    background: var(--purple);
+    border-radius: 10px;
+    height: 10vmin;
+    width: 10vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.option > div {
+    margin: 1px;
+}
+
+.options-section {
+    display: flex;
+    justify-content: center;
 }
 
 #game-scene {
