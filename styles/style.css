@@ -108,8 +108,9 @@ p {
 .option {
     background: var(--purple);
     border-radius: 10px;
-    height: 10vmin;
-    width: 10vmin;
+    height: 6vmin;
+    width: 6vmin;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
