@@ -10,22 +10,44 @@ function main() {
 
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', () => {
-        const backgroundAudio = getAudio('assets/soundtrack.wav', 0.25, true);
-        backgroundAudio.play();
+        onStartButtonClicked();
+    });
 
-        const startScene = document.getElementById('start-scene');
-        startScene.classList.add('hidden');
-
-        startGame();
+    startButton.addEventListener('touchend', () => {
+        onStartButtonClicked();
     });
 
     const restartButton = document.getElementById('restart-button');
     restartButton.addEventListener('click', () => {
-        const endScene = document.getElementById('end-scene');
-        endScene.classList.add('hidden');
-
-        startGame();
+        onRestartButtonClicked();
     });
+
+    restartButton.addEventListener('touchend', () => {
+        onRestartButtonClicked();
+    });
+}
+
+/**
+ * 
+ */
+function onStartButtonClicked() {
+    const backgroundAudio = getAudio('assets/soundtrack.wav', 0.25, true);
+    backgroundAudio.play();
+
+    const startScene = document.getElementById('start-scene');
+    startScene.classList.add('hidden');
+
+    startGame();
+}
+
+/**
+ * 
+ */
+function onRestartButtonClicked() {
+    const endScene = document.getElementById('end-scene');
+    endScene.classList.add('hidden');
+
+    startGame();
 }
 
 /**
