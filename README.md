@@ -19,6 +19,9 @@ The objective of the game is to accurately match the appearance of another monst
 
 * *Poppins* and *Luckiest Guy* Google Fonts
 * Casual Funny Track (looped).wav (megamusiccollection)
+* Blip_Select5.wav (megafxpack)
+* SFX_Game_Celebration.wav (childrens_game_music)
+* SFX_Fail.wav (childrens_game_music)
 
 ## Useful Resources
 

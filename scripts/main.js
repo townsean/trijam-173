@@ -1,5 +1,7 @@
 import options from './options.json' assert { type: "json" };
 
+let _isGameOver = false;
+
 /**
  * Main function
  */
@@ -30,6 +32,7 @@ function main() {
  * 
  */
 function startGame() {
+    _isGameOver = false;
     const gameScene = document.getElementById('game-scene');
     gameScene.classList.remove('hidden');
 
@@ -51,6 +54,11 @@ function startGame() {
         countdownSpan.innerText = countdown;
 
         const interval = setInterval(() => {
+            if(_isGameOver) {
+                clearInterval(interval);
+                return;
+            }
+
             if(countdown == 0) {
                 clearInterval(interval);
                 endGame();
@@ -65,7 +73,9 @@ function startGame() {
 /**
  * 
  */
-function endGame() {
+function endGame(hasWon = false) {
+    _isGameOver = true;
+
     const gameScene = document.getElementById('game-scene');
     gameScene.classList.add('hidden');
 
@@ -80,6 +90,17 @@ function endGame() {
 
     const compareSection = document.getElementById('compare-section');
     compareSection.innerHTML = '';
+
+    const message = document.getElementById('endgame-message');
+    if(hasWon) {
+        message.innerText = "Mimicked! Play"
+        const victorySound = getAudio("assets/victory.wav");
+        victorySound.play();
+    } else {
+        message.innerText = "Whoops! Try"
+        const failSound = getAudio("assets/fail.wav");
+        failSound.play();
+    }
 
     const copyMonster = document.getElementById('monster-to-copy');
     const mimicMonster = document.getElementById('mimic-monster');
@@ -125,8 +146,9 @@ function getOptionElement(optionClassName) {
     optionContainer.classList.add('option');
     option.classList.add(optionClassName);
 
-    optionContainer.appendChild(option);
+    const blipSound = getAudio("assets/blip.wav");
 
+    optionContainer.appendChild(option);
     optionContainer.addEventListener("mouseup", (event) => {
         let className = event.target.className;
         if(className == 'option') {
@@ -150,9 +172,53 @@ function getOptionElement(optionClassName) {
             default:
                 break;
         }
+
+        blipSound.play();
+
+        if(isMonsterMimicked()) {
+            endGame(true);
+        }
     });
 
     return optionContainer;
+}
+
+/**
+ * Checks to see if the monster has been copied correctly
+ * @returns True if monster has been correctly copied, otherwise, false.
+ */
+function isMonsterMimicked() {
+    let isMimicked = true;
+
+    // copied monster elements
+    const copyLeftEyebrow = document.getElementById('copy-left-eyebrow');
+    const copyLeftEye = document.getElementById('copy-left-eye');
+    const copyNose = document.getElementById('copy-nose');
+    const copyMouth = document.getElementById('copy-mouth');
+
+    // mimic elements
+    const leftEyebrow = document.getElementById('left-eyebrow');
+    const leftEye = document.getElementById('left-eye');
+    const nose = document.getElementById('nose');
+    const mouth = document.getElementById('mouth');
+
+    if(copyLeftEyebrow.className != leftEyebrow.className) {
+        isMimicked = false;
+    }
+
+    if(copyLeftEye.className != leftEye.className) {
+        isMimicked = false;
+    }
+
+    if(copyNose.className != nose.className) {
+        isMimicked = false;
+    }
+
+    if(copyMouth.className != mouth.className) {
+        isMimicked = false;
+    }
+
+    return isMimicked;
 }
 
 /**
