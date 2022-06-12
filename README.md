@@ -1,5 +1,5 @@
 # trijam-173
-Source code for Ashley's Trijam #173 entry. The theme is "You are the monster."
+Source code for [Ashley's Trijam #173 entry](https://itch.io/jam/trijam-173/rate/1572084). The theme is "You are the monster."
 
 [Trijam](https://itch.io/jam/trijam-173) is a weekly game jam where the goal is to create a game in under 3 hours of development time. Monster Mimic was completed in about 8 hours of active development time.
 
