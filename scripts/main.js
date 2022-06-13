@@ -9,22 +9,14 @@ function main() {
     generateOptions();
 
     const startButton = document.getElementById('start-button');
-    startButton.addEventListener('click', () => {
+    startButton.onclick = () => {
         onStartButtonClicked();
-    });
-
-    startButton.addEventListener('touchend', () => {
-        onStartButtonClicked();
-    });
+    }
 
     const restartButton = document.getElementById('restart-button');
-    restartButton.addEventListener('click', () => {
+    restartButton.onclick = () => {
         onRestartButtonClicked();
-    });
-
-    restartButton.addEventListener('touchend', () => {
-        onRestartButtonClicked();
-    });
+    }
 }
 
 /**

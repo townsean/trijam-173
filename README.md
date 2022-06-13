@@ -9,7 +9,21 @@ Monster Mimic is a speed and memory game. Players assume the role of a monster w
 
 The objective of the game is to accurately match the appearance of another monster within the finite amount of time.
 
-![Wrong Step, You Fall Gameplay](assets/monster-mimic.gif)
+![Monster Mimic Gameplay](assets/monster-mimic.gif)
+
+## Project Setup
+
+Run with local web server
+
+```bash
+python -m http.server 8000
+```
+
+or
+
+```bash
+python3 -m http.server 8000
+```
 
 ## Built With
 
@@ -31,24 +45,31 @@ The objective of the game is to accurately match the appearance of another monst
 * [Import Assertions](https://v8.dev/features/import-assertions)
 * [Deep copy nodes](https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode)
 
+## Odd issue on mobile devices
+
+I had the following logic for handling the click event on a button:
+
+```javascript
+const startButton = document.getElementById('start-button');
+startButton.addEventListener('click', () => {
+    onStartButtonClicked();
+});
+
+```
+
+But it would not work on mobile devices. Searching for answers seemed to indicate the click event should work on touch taps, but alas it didn't. Turns out, instead of listening to the `click` I needed to use the button's `onclick` instead.
+
+```javascript
+startButton.onclick = () => {
+    onStartButtonClicked();
+}
+```
 
 ## Ideas for future improvements
 
-???
+* More customization options
+* Difficulty levels
 
-## Project Setup
-
-Run with local web server
-
-```bash
-python -m http.server 8000
-```
-
-or
-
-```bash
-python3 -m http.server 8000
-```
 
 ## Maintainers
 
