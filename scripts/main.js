@@ -12,10 +12,6 @@ function main() {
     startButton.onclick = () => {
         onStartButtonClicked();
     }
-    startButton.addEventListener("click", () => {
-
-        onStartButtonClicked();
-    });
 
     const restartButton = document.getElementById('restart-button');
     restartButton.onclick = () => {
