@@ -95,6 +95,7 @@ p {
     transition: background-color 3ms linear;
     font-size: 1.25rem;
     margin-top: 4rem;
+    user-select: none;
 }
 
 .game-state-button:hover {
