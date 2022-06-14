@@ -9,14 +9,14 @@ function main() {
     generateOptions();
 
     const startButton = document.getElementById('start-button');
-    startButton.onclick = () => {
+    startButton.addEventListener('pointerup', () => {
         onStartButtonClicked();
-    }
+    });
 
     const restartButton = document.getElementById('restart-button');
-    restartButton.onclick = () => {
-        onRestartButtonClicked();
-    }
+    restartButton.addEventListener('pointerup', () => {
+        onStartButtonClicked();
+    });
 }
 
 /**
@@ -163,7 +163,7 @@ function getOptionElement(optionClassName) {
     const blipSound = getAudio("assets/blip.wav");
 
     optionContainer.appendChild(option);
-    optionContainer.addEventListener("mouseup", (event) => {
+    optionContainer.addEventListener("pointerup", (event) => {
         let className = event.target.className;
         if(className == 'option') {
             className = event.target.firstChild.className;
