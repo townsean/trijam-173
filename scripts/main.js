@@ -9,12 +9,12 @@ function main() {
     generateOptions();
 
     const startButton = document.getElementById('start-button');
-    startButton.addEventListener('pointerup', () => {
+    startButton.addEventListener('click', () => {
         onStartButtonClicked();
-    });
+    }, { capture: true });
 
     const restartButton = document.getElementById('restart-button');
-    restartButton.addEventListener('pointerup', () => {
+    restartButton.addEventListener('click', () => {
         onRestartButtonClicked();
     });
 }
@@ -163,7 +163,7 @@ function getOptionElement(optionClassName) {
     const blipSound = getAudio("assets/blip.wav");
 
     optionContainer.appendChild(option);
-    optionContainer.addEventListener("pointerup", (event) => {
+    optionContainer.addEventListener("click", (event) => {
         let className = event.target.className;
         if(className == 'option') {
             className = event.target.firstChild.className;
