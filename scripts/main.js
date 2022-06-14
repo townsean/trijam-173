@@ -15,7 +15,7 @@ function main() {
 
     const restartButton = document.getElementById('restart-button');
     restartButton.addEventListener('pointerup', () => {
-        onStartButtonClicked();
+        onRestartButtonClicked();
     });
 }
 
