@@ -57,13 +57,7 @@ startButton.addEventListener('click', () => {
 
 ```
 
-But it would not work on mobile devices. Searching for answers seemed to indicate the click event should work on touch taps, but alas it didn't. Turns out, instead of listening to the `click` I needed to use the button's `onclick` instead.
-
-```javascript
-startButton.onclick = () => {
-    onStartButtonClicked();
-}
-```
+I am a little stumped on why the click event is not working on devices. I swapped `click` for `pointerup` and `mouseup` with no luck. 
 
 ## Ideas for future improvements
 
