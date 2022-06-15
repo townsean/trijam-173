@@ -42,28 +42,8 @@ python3 -m http.server 8000
 ## Useful Resources
 
 * [Draw a semi cirle with CSS](https://stackoverflow.com/questions/22415651/half-circle-with-css-border-outline-only)
-* [Import Assertions](https://v8.dev/features/import-assertions)
+* [Import Assertions](https://v8.dev/features/import-assertions) (not compatible in most modern browsers yet)
 * [Deep copy nodes](https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode)
-
-## Odd issue on mobile devices
-
-I had the following logic for handling the click event on a button:
-
-```javascript
-const startButton = document.getElementById('start-button');
-startButton.addEventListener('click', () => {
-    onStartButtonClicked();
-});
-
-```
-
-But it would not work on mobile devices. Searching for answers seemed to indicate the click event should work on touch taps, but alas it didn't. Turns out, instead of listening to the `click` I needed to use the button's `onclick` instead.
-
-```javascript
-startButton.onclick = () => {
-    onStartButtonClicked();
-}
-```
 
 ## Ideas for future improvements
 

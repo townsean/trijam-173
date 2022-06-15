@@ -1,11 +1,14 @@
-import options from './options.json' assert { type: "json" };
+// assert is not compatible in all modern browsers
+// import options from './options.json' assert { type: "json" };
 
 let _isGameOver = false;
+let options = null;
 
 /**
  * Main function
  */
-function main() {
+async function main() {
+    options = await getMonsterOptions();
     generateOptions();
 
     const startButton = document.getElementById('start-button');
@@ -36,6 +39,27 @@ function onRestartButtonClicked() {
     endScene.classList.add('hidden');
 
     startGame();
+}
+
+
+/**
+ * Fetch monster option data
+ * @returns Monster option data
+ */
+ async function getMonsterOptions() {
+    let data = [];
+    try { 
+        const response = await fetch('scripts/options.json');
+        if (response.ok) {
+            data = response.json();
+        } else {
+            throw response.statusText;
+        }
+    } catch (error) {
+        console.error(error);
+    } finally {
+        return data;
+    }
 }
 
 /**
@@ -350,4 +374,4 @@ function getAudio(url, volume = 0.5, loop = false) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-main();
+await main();
