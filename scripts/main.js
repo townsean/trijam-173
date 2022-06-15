@@ -10,11 +10,9 @@ function main() {
 
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', onStartButtonClicked);
-    startButton.addEventListener('pointerup', onStartButtonClicked);
 
     const restartButton = document.getElementById('restart-button');
     restartButton.addEventListener('click', onRestartButtonClicked);
-    restartButton.addEventListener('pointerup', onRestartButtonClicked);
 }
 
 /**
