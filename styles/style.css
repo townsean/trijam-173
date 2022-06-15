@@ -83,7 +83,7 @@ p {
 }
 
 .game-state-button {
-    background: var(--medium-purple);
+    background: blue;
     color: white;
     text-shadow: 1px 1px var(--primary);
     border-radius: 20px;
@@ -98,9 +98,6 @@ p {
     user-select: none;
 }
 
-.game-state-button:hover {
-    background: var(--purple);
-}
 
 .scene {
     text-align: center;
