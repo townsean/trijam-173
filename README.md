@@ -45,6 +45,20 @@ python3 -m http.server 8000
 * [Import Assertions](https://v8.dev/features/import-assertions) (not compatible in most modern browsers yet)
 * [Deep copy nodes](https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode)
 
+## Odd issue on mobile devices
+
+I had the following logic for handling the click event on a button:
+
+```javascript
+const startButton = document.getElementById('start-button');
+startButton.addEventListener('click', () => {
+    onStartButtonClicked();
+});
+
+```
+
+I am a little stumped on why the click event is not working on devices. I swapped `click` for `pointerup` and `mouseup` with no luck. 
+
 ## Ideas for future improvements
 
 * More customization options
