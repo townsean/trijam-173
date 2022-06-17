@@ -11,6 +11,10 @@ The objective of the game is to accurately match the appearance of another monst
 
 ![Monster Mimic Gameplay](assets/monster-mimic.gif)
 
+Monster Mimic [ranked 17 out of 39 entries](https://itch.io/jam/trijam-173/results).
+
+![Monster Mimic Results](assets/monster-mimic-results.png)
+
 ## Project Setup
 
 Run with local web server
